@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-component</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- 引用所有的依赖js -->
+	<script src="js/angular.js"></script>
+	<script src="js/angular-ui-router.js"></script>
+	<script src="component/homeComponent.js"></script>
+	<script src="component/classComponent.js"></script>
+	<script src="config.js"></script>
+</head>
+<body>
+	<div class="header">
+		我的管理系统
+	</div>
+	<div>
+		<ul class="nav">
+			<li><a ui-sref="home">我的信息</a></li>
+			<li><a ui-sref="class">我的分类</a></li>
+			<li><a ui-sref="person">我的私人</a></li>
+			<li><a ui-sref="xiu">我的休闲</a></li>
+		</ul>
+		<!-- 视图区域 -->
+		<div class="view" ui-view></div>
+	</div>
+</body>
+</html>
