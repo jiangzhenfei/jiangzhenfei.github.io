@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+	<div id="demo"></div>
+	<script>
+		function timeOut(hourtime,mintime,secondtime,container,callback){
+			var time={
+				hour:hourtime,
+				min:mintime,
+				second:secondtime
+			}
+			console.log(parseInt(time.second))
+			var timer=setInterval(function(){
+				time.second=parseInt(time.second)
+				time.second--
+				
+				if(parseInt(time.second)<0){
+					time.second=59;
+					time.min--
+				}
+				if(parseInt(time.second)<10){
+					time.second='0'+parseInt(time.second)
+					console.log(parseInt(time.second))
+				}
+				if(parseInt(time.min)<0){
+					time.min=59;
+					time.hour--
+				}
+				if(parseInt(time.min)<10){
+					time.min='0'+parseInt(time.min)
+				}
+
+				container.html(time.hour+'时'+time.min+'分'+time.second+'秒')
+
+				if(parseInt(time.hour)==0&&parseInt(time.min)==0&&parseInt(time.second)==0){
+					clearInterval(timer)
+					callback();
+				}
+				
+			},1000)
+
+		}
+
+		timeOut(0,0,10,$('#demo'),function(){alert('时间到了')});
+	</script>
+</body>
+</html>
