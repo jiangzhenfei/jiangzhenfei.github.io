@@ -26,7 +26,7 @@
 			step:1,
 
 			init:function(){
-				$('div.restart').off('click')
+				///$('div.restart').off('click')
 				this.restart()
 				
 				$('h3').hide()
@@ -126,6 +126,8 @@
 					$('div.error').hide()
 					$('div.success').hide()
 					$('div.restart').hide()
+					$('#container').off('click','div')
+					$('div.restart').off('click')
 					$('.time').html(20)
 					self.step=1;
 					self.init()
