@@ -1,35 +1,6 @@
-<!doctype html>
-<html lang="en" ng-app="app">
-<head>
-	<meta charset="UTF-8">
-	<title>ng-component</title>
-	<link rel="stylesheet" href="css/style.css">
-	<!-- 引用所有的依赖js -->
-	<script src="js/angular.js"></script>
-	<script src="js/angular-ui-router.js"></script>
-	<script src="component/homeComponent.js"></script>
-	<script src="component/classComponent.js"></script>
-	<script src="config.js"></script>
-	<style>
-		.active{
-			background: red;
-		}
-	</style>
-</head>
-<body>
-	<div class="header">
-		我的管理系统
-	</div>
-	<div ng-controller="nav">
-		<ul class="nav">
-			<!-- 默认激活的操作 -->
-			<li ui-sref-active="active"><a ui-sref="home({id:18})">我的信息</a></li>
-			<li ng-class="{'active' : $state.includes('class')}"><a ui-sref="class">我的分类</a></li>
-			<li><a ui-sref="person">我的私人</a></li>
-			<li><a ui-sref="xiu">我的休闲</a></li>
-		</ul>
-		<!-- 视图区域 -->
-		<div class="view" ui-view></div>
-	</div>
-</body>
-</html>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=viewport content="width=device-width,viewport-fit=cover,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><link rel=icon href=/favicon.ico><title>天狗</title><script src=js/jquery-3.2.1.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.js></script><script src=js/china.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js></script><script src=js/gio.js></script><script src=https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js></script><link href=/css/about.8f7c27b1.css rel=prefetch><link href=/css/about~map~mobile.a387f041.css rel=prefetch><link href=/css/map.2119444a.css rel=prefetch><link href=/css/mobile.1d0b55a7.css rel=prefetch><link href=/js/about.3cd64f55.js rel=prefetch><link href=/js/about~map~mobile.87d132a6.js rel=prefetch><link href=/js/map.ede1b1ba.js rel=prefetch><link href=/js/mobile.3b7f858e.js rel=prefetch><link href=/css/app.d797d785.css rel=preload as=style><link href=/css/chunk-vendors.5d00fdba.css rel=preload as=style><link href=/js/app.d79a7049.js rel=preload as=script><link href=/js/chunk-vendors.f877fbf9.js rel=preload as=script><link href=/css/chunk-vendors.5d00fdba.css rel=stylesheet><link href=/css/app.d797d785.css rel=stylesheet></head><style>.ivu-tabs-bar{
+    border: none!important;
+  }
+  .flex-title{
+    color: #fff;
+  }</style><body><noscript><strong>We're sorry but tiangou doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.f877fbf9.js></script><script src=/js/app.d79a7049.js></script></body></html>
